@@ -1,0 +1,7 @@
+name: Friends
+version: ${project.version}
+main: me.kowlintech.friends.Friends
+api-version: 1.13
+load: STARTUP
+authors: [KowlinMC]
+description: A Minecraft Friends plugin developed by Kowlin#4417
