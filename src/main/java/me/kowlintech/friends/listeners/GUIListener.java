@@ -85,6 +85,8 @@ public class GUIListener implements Listener {
                     FriendsManager.addFriendToPlayer(p.getUniqueId().toString(), player.getUniqueId().toString());
                     FriendsManager.removeFriendRequest(p.getUniqueId().toString(), player.getUniqueId().toString());
                     FriendsManager.removeFriendRequest(player.getUniqueId().toString(), p.getUniqueId().toString());
+                    p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                    p.openInventory(GUI.friendListGUIInventory(p));
                 }
             } else {
                 return;
