@@ -18,7 +18,7 @@ public class GUIListener implements Listener {
     private void inventoryClick(InventoryClickEvent e) throws SQLException {
         Player p = (Player) e.getWhoClicked();
 
-        if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends List"))) {
+        if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends GUI"))) {
             e.setCancelled(true);
             if(e.getCurrentItem().getType().equals(Material.AIR)) {
                 return;
