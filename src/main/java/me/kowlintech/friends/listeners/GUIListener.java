@@ -55,10 +55,12 @@ public class GUIListener implements Listener {
                     p.openInventory(GUI.friendListGUIInventory(p));
                     return;
                 }
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
-                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-                p.closeInventory();
-                return;
+            } else if(e.isLeftClick()) {
+                if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
+                    p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                    p.closeInventory();
+                    return;
+                }
             } else {
                 return;
             }
@@ -72,9 +74,18 @@ public class GUIListener implements Listener {
                     OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
                     FriendsManager.removeFriendRequest(player.getUniqueId().toString(), p.getUniqueId().toString());
                 }
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
-                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-                p.closeInventory();
+            } else if(e.isLeftClick()) {
+                if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
+                    p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                    p.closeInventory();
+                    return;
+                } else if(e.getCurrentItem().getItemMeta().getLore().equals(lore)) {
+                    OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
+                    FriendsManager.addFriendToPlayer(player.getUniqueId().toString(), p.getUniqueId().toString());
+                    FriendsManager.addFriendToPlayer(p.getUniqueId().toString(), player.getUniqueId().toString());
+                    FriendsManager.removeFriendRequest(p.getUniqueId().toString(), player.getUniqueId().toString());
+                    FriendsManager.removeFriendRequest(player.getUniqueId().toString(), p.getUniqueId().toString());
+                }
             } else {
                 return;
             }
@@ -87,9 +98,12 @@ public class GUIListener implements Listener {
                     OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
                     FriendsManager.removeFriendRequest(p.getUniqueId().toString(), player.getUniqueId().toString());
                 }
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
-                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-                p.closeInventory();
+            } else if(e.isLeftClick()) {
+                if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
+                    p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                    p.closeInventory();
+                    return;
+                }
             } else {
                 return;
             }
