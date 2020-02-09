@@ -31,17 +31,17 @@ public class GUIListener implements Listener {
                 p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
                 p.closeInventory();
                 p.openInventory(GUI.incomingRequestsGUIInventory(p));
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("&6&lOutgoing Friend Requests")) {
-                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-                p.closeInventory();
-                p.openInventory(GUI.outgoingRequestsGUIInventory(p));
-            } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends List"))) {
-                e.setCancelled(true);
-            } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lIncoming Friend Requests"))) {
-                e.setCancelled(true);
-            } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lOutgoing Friend Requests"))) {
-                e.setCancelled(true);
             }
+        } else if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("&6&lOutgoing Friend Requests")) {
+            p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+            p.closeInventory();
+            p.openInventory(GUI.outgoingRequestsGUIInventory(p));
+        } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends List"))) {
+            e.setCancelled(true);
+        } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lIncoming Friend Requests"))) {
+            e.setCancelled(true);
+        } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lOutgoing Friend Requests"))) {
+            e.setCancelled(true);
         }
     }
 
