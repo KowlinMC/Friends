@@ -20,23 +20,23 @@ public class GUIListener implements Listener {
 
         if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends GUI"))) {
             e.setCancelled(true);
-            if(e.getCurrentItem().getType().equals(Material.AIR)) {
-                return;
-            }
-            if(e.getCurrentItem().getItemMeta().getDisplayName().equals("&6&lFriends List")) {
+            if(e.getCurrentItem().getType() == Material.BOOK_AND_QUILL) {
                 p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-                p.closeInventory();
                 p.openInventory(GUI.friendListGUIInventory(p));
                 return;
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals("&6&lIncoming Friend Requests")) {
+            } else if(e.getCurrentItem().getType() == Material.GOLDEN_APPLE) {
                 p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-                p.closeInventory();
                 p.openInventory(GUI.incomingRequestsGUIInventory(p));
                 return;
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals("&6&lOutgoing Friend Requests")) {
+            } else if(e.getCurrentItem().getType() == Material.APPLE) {
+                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                p.openInventory(GUI.outgoingRequestsGUIInventory(p));
+                return;
+            } else if(e.getCurrentItem().getType() == Material.BARRIER) {
                 p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
                 p.closeInventory();
-                p.openInventory(GUI.outgoingRequestsGUIInventory(p));
+                return;
+            } else {
                 return;
             }
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends List"))) {
