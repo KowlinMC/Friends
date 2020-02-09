@@ -23,25 +23,31 @@ public class GUIListener implements Listener {
             if(e.getCurrentItem().getType().equals(Material.AIR)) {
                 return;
             }
-            if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("&6&lFriends List")) {
+            if(e.getCurrentItem().getItemMeta().getDisplayName().equals("&6&lFriends List")) {
                 p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
                 p.closeInventory();
                 p.openInventory(GUI.friendListGUIInventory(p));
-            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("&6&lIncoming Friend Requests")) {
+                return;
+            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals("&6&lIncoming Friend Requests")) {
                 p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
                 p.closeInventory();
                 p.openInventory(GUI.incomingRequestsGUIInventory(p));
+                return;
+            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals("&6&lOutgoing Friend Requests")) {
+                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                p.closeInventory();
+                p.openInventory(GUI.outgoingRequestsGUIInventory(p));
+                return;
             }
-        } else if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("&6&lOutgoing Friend Requests")) {
-            p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
-            p.closeInventory();
-            p.openInventory(GUI.outgoingRequestsGUIInventory(p));
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends List"))) {
             e.setCancelled(true);
+            return;
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lIncoming Friend Requests"))) {
             e.setCancelled(true);
+            return;
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lOutgoing Friend Requests"))) {
             e.setCancelled(true);
+            return;
         }
     }
 

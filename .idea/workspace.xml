@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b0451e9-41da-4f95-9ca5-cf3724ef48d0" name="Default Changelist" comment="mistype.">
+    <list default="true" id="5b0451e9-41da-4f95-9ca5-cf3724ef48d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/listeners/GUIListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/listeners/GUIListener.java" afterDir="false" />
     </list>
@@ -87,7 +87,7 @@
       <workItem from="1581203606188" duration="91000" />
       <workItem from="1581217885965" duration="3634000" />
       <workItem from="1581221564229" duration="2016000" />
-      <workItem from="1581224025818" duration="244000" />
+      <workItem from="1581224025818" duration="492000" />
     </task>
     <task id="LOCAL-00001" summary="updated basically everything.">
       <created>1581223564474</created>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581224075830</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="big fixes?">
+      <created>1581224280808</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581224280808</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,21 +119,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated basically everything." />
     <MESSAGE value="mistype." />
-    <option name="LAST_COMMIT_MESSAGE" value="mistype." />
+    <MESSAGE value="big fixes?" />
+    <option name="LAST_COMMIT_MESSAGE" value="big fixes?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1581190356079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581190356079" />
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581224102285">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581224277767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581224102285" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1581224079611">
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581224277767" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1581224281946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581224079611" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581224281946" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581134946899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
