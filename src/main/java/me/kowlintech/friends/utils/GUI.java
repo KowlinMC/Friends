@@ -76,7 +76,7 @@ public class GUI {
             SkullMeta meta = (SkullMeta) skull.getItemMeta();
             ArrayList<String> skullLore = new ArrayList<String>();
 
-            meta.setDisplayName(Colour.translate("&6" + player1.getName()));
+            meta.setDisplayName(Colour.translate(player1.getName()));
             skullLore.add(Colour.translate("&9Right-Click to remove from friends list."));
             meta.setLore(skullLore);
             meta.setOwningPlayer(player1);

@@ -1,8 +1,11 @@
 package me.kowlintech.friends.listeners;
 
 import me.kowlintech.friends.utils.Colour;
+import me.kowlintech.friends.utils.FriendsManager;
 import me.kowlintech.friends.utils.GUI;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,6 +14,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class GUIListener implements Listener {
 
@@ -41,7 +45,23 @@ public class GUIListener implements Listener {
             }
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lFriends List"))) {
             e.setCancelled(true);
-            return;
+            ArrayList<String> lore = new ArrayList<String>();
+            lore.add(Colour.translate("&9Right-Click to remove from friends list."));
+            if(e.isRightClick()) {
+                if(e.getCurrentItem().getItemMeta().getLore().equals(lore)) {
+                    OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
+                    FriendsManager.removeFriendFromPlayer(p.getUniqueId().toString(), player.getUniqueId().toString());
+                    p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                    p.openInventory(GUI.friendListGUIInventory(p));
+                    return;
+                }
+            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
+                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                p.closeInventory();
+                return;
+            } else {
+                return;
+            }
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lIncoming Friend Requests"))) {
             e.setCancelled(true);
             return;
