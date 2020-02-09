@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b0451e9-41da-4f95-9ca5-cf3724ef48d0" name="Default Changelist" comment="" />
+    <list default="true" id="5b0451e9-41da-4f95-9ca5-cf3724ef48d0" name="Default Changelist" comment="updated basically e">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/commands/FriendAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/commands/FriendGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/listeners/GUIListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/utils/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/utils/enums/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/Friends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/utils/FriendsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kowlintech/friends/utils/FriendsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +27,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,6 +40,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1XVcuNKuhMPfXKcLw8dLlqDqnxC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -31,6 +50,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -72,7 +92,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581134925615</updated>
-      <workItem from="1581134934603" duration="3567000" />
+      <workItem from="1581134934603" duration="4654000" />
+      <workItem from="1581187894793" duration="3435000" />
+      <workItem from="1581203606188" duration="91000" />
+      <workItem from="1581217885965" duration="3634000" />
+      <workItem from="1581221564229" duration="1943000" />
     </task>
     <servers />
   </component>
@@ -80,6 +104,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1581190356079">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581190356079" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581223536354">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581223536354" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581134946899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

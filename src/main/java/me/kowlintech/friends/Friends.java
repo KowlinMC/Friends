@@ -1,5 +1,9 @@
 package me.kowlintech.friends;
 
+import me.kowlintech.friends.commands.FriendAdd;
+import me.kowlintech.friends.commands.FriendGUI;
+import me.kowlintech.friends.listeners.GUIListener;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.sql.Connection;
@@ -26,6 +30,11 @@ public final class Friends extends JavaPlugin {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        Bukkit.getPluginManager().registerEvents(new GUIListener(), this);
+
+        getCommand("fadd").setExecutor(new FriendAdd());
+        getCommand("fgui").setExecutor(new FriendGUI());
     }
 
     @Override
@@ -51,5 +60,7 @@ public final class Friends extends JavaPlugin {
         Statement st = connection.createStatement();
         st.execute("CREATE TABLE IF NOT EXISTS friends (playera TEXT NOT NULL, playerb TEXT NOT NULL)");
         getPlugin().getLogger().info("Checked table \"friends\"!");
+        st.execute("CREATE TABLE IF NOT EXISTS requests (thatrequested TEXT NOT NULL, other TEXT NOT NULL, whenrequested TEXT NOT NULL)");
+        getPlugin().getLogger().info("Checked table \"requests\"!");
     }
 }
