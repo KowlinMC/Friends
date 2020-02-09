@@ -97,6 +97,7 @@ public class GUIListener implements Listener {
                 if(e.getCurrentItem().getItemMeta().getLore().equals(lore)) {
                     OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
                     FriendsManager.removeFriendRequest(p.getUniqueId().toString(), player.getUniqueId().toString());
+                    FriendsManager.removeFriendRequest(player.getUniqueId().toString(), p.getUniqueId().toString());
                 }
             } else if(e.isLeftClick()) {
                 if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
