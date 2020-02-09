@@ -68,7 +68,7 @@ public class GUI {
     }
 
     public static Inventory friendListGUIInventory(Player player) throws SQLException {
-        Inventory friendlistguiinv = Bukkit.getServer().createInventory(player, 36, Colour.translate("&9&lFriends List"));
+        Inventory friendlistguiinv = Bukkit.getServer().createInventory(player, 45, Colour.translate("&9&lFriends List"));
         for(String frienduuid : FriendsManager.getPlayerFriends(player.getUniqueId().toString())) {
             OfflinePlayer player1 = Bukkit.getServer().getOfflinePlayer(UUID.fromString(frienduuid));
 
@@ -92,7 +92,7 @@ public class GUI {
         closeMeta.setDisplayName(Colour.translate("&c&lClose"));
         close.setItemMeta(closeMeta);
 
-        friendlistguiinv.setItem(35, close);
+        friendlistguiinv.setItem(44, close);
 
         return friendlistguiinv;
     }
@@ -139,7 +139,7 @@ public class GUI {
             SkullMeta meta = (SkullMeta) skull.getItemMeta();
             ArrayList<String> skullLore = new ArrayList<String>();
 
-            meta.setDisplayName(Colour.translate("&6" + player1.getName()));
+            meta.setDisplayName(Colour.translate(player1.getName()));
             skullLore.add(Colour.translate("&9Left-Click to delete."));
             meta.setLore(skullLore);
             meta.setOwningPlayer(player1);

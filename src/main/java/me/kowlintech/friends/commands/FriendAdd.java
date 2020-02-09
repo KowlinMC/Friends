@@ -52,7 +52,7 @@ public class FriendAdd implements CommandExecutor {
                                         return true;
                                     } else {
                                         FriendsManager.addFriendRequest(senderPlayer.getUniqueId().toString(), player.getUniqueId().toString());
-                                        sender.sendMessage(Colour.prefix(ChatColor.GREEN) + Colour.translate("Friend request has been sent to " + senderPlayer.getName() + ". To remove/delete this request please use /fgui."));
+                                        sender.sendMessage(Colour.prefix(ChatColor.GREEN) + Colour.translate("Friend request has been sent to " + player.getName() + ". To remove/delete this request please use /fgui."));
                                         return true;
                                     }
                                 }

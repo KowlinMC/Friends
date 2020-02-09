@@ -64,10 +64,35 @@ public class GUIListener implements Listener {
             }
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lIncoming Friend Requests"))) {
             e.setCancelled(true);
-            return;
+            ArrayList<String> lore = new ArrayList<String>();
+            lore.add(Colour.translate("&9Left-Click to accept."));
+            lore.add(Colour.translate("&9Right-Click to deny."));
+            if(e.isLeftClick()) {
+                if(e.getCurrentItem().getItemMeta().getLore().equals(lore)) {
+                    OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
+                    FriendsManager.removeFriendRequest(player.getUniqueId().toString(), p.getUniqueId().toString());
+                }
+            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
+                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                p.closeInventory();
+            } else {
+                return;
+            }
         } else if(e.getInventory().getTitle().equalsIgnoreCase(Colour.translate("&9&lOutgoing Friend Requests"))) {
             e.setCancelled(true);
-            return;
+            ArrayList<String> lore = new ArrayList<String>();
+            lore.add(Colour.translate("&9Left-Click to delete."));
+            if(e.isLeftClick()) {
+                if(e.getCurrentItem().getItemMeta().getLore().equals(lore)) {
+                    OfflinePlayer player = Bukkit.getOfflinePlayer(e.getCurrentItem().getItemMeta().getDisplayName());
+                    FriendsManager.removeFriendRequest(p.getUniqueId().toString(), player.getUniqueId().toString());
+                }
+            } else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(Colour.translate("&c&lClose"))) {
+                p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1.0f, 1.0f);
+                p.closeInventory();
+            } else {
+                return;
+            }
         }
     }
 
